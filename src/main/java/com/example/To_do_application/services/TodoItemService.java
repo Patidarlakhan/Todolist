@@ -28,7 +28,7 @@ public class TodoItemService {
         return todoItemRepository.findById(Id);
     }
 
-    public TodoItem saveAll(TodoItem todoItems){
+    public TodoItem save(TodoItem todoItems){
         if(todoItems.getId()== null){
             todoItems.setCreatedAt(Instant.now());
         }
@@ -36,7 +36,9 @@ public class TodoItemService {
         return todoItemRepository.save(todoItems);
     }
 
+
     public  void delete(TodoItem todoItem){
         todoItemRepository.delete(todoItem);
     }
+
 }

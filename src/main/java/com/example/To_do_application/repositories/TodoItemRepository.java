@@ -10,18 +10,5 @@ import com.example.To_do_application.models.TodoItem;
 
 @Repository
 public interface TodoItemRepository extends JpaRepository<TodoItem, Long>{
-    List<TodoItem> findAll();
-
-    Optional<TodoItem> findById(Long id);
-
-    // void create(TodoItem run);
-
-    // void update(TodoItem run, Long id);
-
-    void delete(TodoItem todoItems);
-
-    long count();
-
-    // TodoItem saveAll(TodoItem todoItems);
-
+    
 }
